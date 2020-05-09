@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Form from "./components/Form";
 import Url from "./components/Url";
+import { shortener } from "./shortener";
 import "./App.css";
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <Form handleInputChange={handleInputChange} />
-      <Url input={input} />
+      <Url input={shortener(input)} />
     </div>
   );
 }
